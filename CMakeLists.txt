@@ -135,6 +135,7 @@ if(DEFINED ENV{PICO_WIFI})
     ${CMAKE_SOURCE_DIR}/lib/picoruby/mrbgems/picoruby-net/ports/rp2040/dns.c
     ${CMAKE_SOURCE_DIR}/lib/picoruby/mrbgems/picoruby-net/ports/rp2040/tcp.c
     ${CMAKE_SOURCE_DIR}/lib/picoruby/mrbgems/picoruby-net/ports/rp2040/udp.c
+    ${CMAKE_SOURCE_DIR}/lib/picoruby/mrbgems/picoruby-net/ports/rp2040/mqtt.c
   )
 endif()
 add_executable(${PROJECT_NAME}
@@ -240,4 +241,3 @@ add_custom_command(
   COMMAND gzip -kf ${PROJECT_NAME}.uf2
   COMMAND zip -r ${PROJECT_NAME}.uf2.zip ${PROJECT_NAME}.uf2
 )
-
